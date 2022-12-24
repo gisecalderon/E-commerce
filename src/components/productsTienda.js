@@ -7,6 +7,7 @@ export const products = [
         categoria: "remeras",
         img: 
     };
+
     {
         name: "Hoodie Fire",
         precio: 9500,
@@ -14,6 +15,7 @@ export const products = [
         categoria: "hoddie",
         img: 
     };
+
     {
         name: "Wide Leg",
         precio: 7500,
@@ -21,6 +23,7 @@ export const products = [
         categoria: "jeans",
         img: 
     };
+
     {
         name: "Manga 3/4 azul",
         precio: 3800,
@@ -28,4 +31,5 @@ export const products = [
         categoria: "remeras",
         img: 
     };
+    
 ];
