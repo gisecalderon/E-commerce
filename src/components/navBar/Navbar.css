@@ -1,0 +1,39 @@
+.navbar-container{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo-container{
+    width: 10%;
+}
+
+.logo-container > img{
+    width: 80%;
+    height: 10vh;
+    object-fit: cover;
+}
+
+.navbar{
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.item-navbar{
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+
+

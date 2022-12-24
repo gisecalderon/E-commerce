@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./components/counter/Counter";
+import CustomButtom from "./components/customButton/CustomButton";
+import itemListContainer from "./components/itemListContainer/itemListContainer"
+import  NavBar from "./components/navBar/NavBar"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+function App(){
+
+    return (
+        <div>
+            <NavBar />
+            <itemListContainer greeting={"Buenvenidos"}/>
+            <Counter />
+        </div>
+    );
+};
 
 export default App;
