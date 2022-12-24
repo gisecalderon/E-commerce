@@ -5,7 +5,7 @@ export const products = [
         precio: 4500,
         descripcion: "remera de algodón",
         categoria: "remeras",
-        img: 
+        img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887690/react/pack1_jeo6vi.jpg"
     };
 
     {
@@ -13,7 +13,7 @@ export const products = [
         precio: 9500,
         descripcion: "hoddie estampado de algodón",
         categoria: "hoddie",
-        img: 
+        img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887657/react/d47ae1dc9d4539459fa036cc0d77cd24_pujf0g.jpg"
     };
 
     {
@@ -21,15 +21,14 @@ export const products = [
         precio: 7500,
         descripcion:"jeans rigido",
         categoria: "jeans",
-        img: 
+        img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887717/react/3437_4128_404_of_bxw4jl.webp"
     };
 
     {
-        name: "Manga 3/4 azul",
+        name: "Top azul",
         precio: 3800,
         descripcion:"remera de morley",
         categoria: "remeras",
-        img: 
+        img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887879/react/1750002439_6_1_1_mpirts.jpg"
     };
-    
 ];

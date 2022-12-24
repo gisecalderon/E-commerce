@@ -30,18 +30,13 @@ const itemListContainer = ( {greeting} ) => {
 
   return (
     <div>
-      <h2>{greeting}</h2>
       <Counter stock={5} initial={1} onAdd={onAdd}/>
-      {
-        items.map((element, indice)=>{
+      {items.map((element, indice)=>{
           return( 
-            <div key={element.name}> 
-              <h2>{element.name}</h2>
-              <img src={element.img} />
-              <h3>${element.precio}</h3>
-            </div>);
-        })
-      }
+            <ProductsCard key={element.name} element = {element}/>
+          );
+          })}
+          <ItemList items={items} />
     </div>
   );
 };
