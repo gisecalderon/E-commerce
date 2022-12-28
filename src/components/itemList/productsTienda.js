@@ -6,7 +6,7 @@ export const products = [
         descripcion: "remera de algodón",
         categoria: "remeras",
         img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887690/react/pack1_jeo6vi.jpg"
-    };
+    },
 
     {
         name: "Hoodie Fire",
@@ -14,7 +14,7 @@ export const products = [
         descripcion: "hoddie estampado de algodón",
         categoria: "hoddie",
         img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887657/react/d47ae1dc9d4539459fa036cc0d77cd24_pujf0g.jpg"
-    };
+    },
 
     {
         name: "Wide Leg",
@@ -22,7 +22,7 @@ export const products = [
         descripcion:"jeans rigido",
         categoria: "jeans",
         img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887717/react/3437_4128_404_of_bxw4jl.webp"
-    };
+    },
 
     {
         name: "Top azul",
@@ -30,5 +30,5 @@ export const products = [
         descripcion:"remera de morley",
         categoria: "remeras",
         img: "https://res.cloudinary.com/dyi5xvxn1/image/upload/v1671887879/react/1750002439_6_1_1_mpirts.jpg"
-    };
-];
+    }
+]

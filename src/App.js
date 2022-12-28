@@ -1,14 +1,15 @@
-import Counter from "./components/counter/Counter";
+import Counter from "./components/itemCount/ItemCount";
 import CustomButtom from "./components/customButton/CustomButton";
-import itemListContainer from "./components/itemListContainer/itemListContainer"
-import  NavBar from "./components/navBar/NavBar"
+import  NavBar from "../src/components/navBar/NavBar"
+import ItemListContainer from "./components/itemListContainer/ItemListContainer";
 
 function App(){
 
     return (
         <div>
             <NavBar />
-            <itemListContainer greeting={"Buenvenidos"}/>
+            <ItemListContainer/>
+            <CustomButtom/>
             <Counter />
         </div>
     );
