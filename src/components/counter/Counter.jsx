@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {useState} from "react"
-const Counter = (stock, initial, onAdd ) => {
 
     const [counter, setCounter] = useState( initial )
     
