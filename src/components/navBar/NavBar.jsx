@@ -1,6 +1,8 @@
 
 
+import { Link } from "react-router-dom";
 import "./Navbar.css"
+import {CardWidget} from "../cardWidget/CardWidget";
 
 const NavBar = ()=>{
 
@@ -10,11 +12,12 @@ const NavBar = ()=>{
                 <img className="logo-navbar" src="" alt="Logo" />
             </div>
             <ul className="navbar">
-                <li className="item-navbar">Hoodies</li>       
-                <li className="item-navbar">Remeras</li>
-                <li className="item-navbar">Jeans</li>
+                <Link className="item-navbar" to="/">Todo</Link>
+                <Link className="item-navbar" to="/category/hoodies">Hoodies</Link>       
+                <Link className="item-navbar" to="/category/remeras">Remeras</Link>
+                <Link className="item-navbar" to="/category/jeans">Jeans</Link>
             </ul>  
-            <cardWidget />
+            <CardWidget />
         </div>
     );
 };

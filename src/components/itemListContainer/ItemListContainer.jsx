@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-import { products } from "../itemList/productsTienda";
+import { products } from "../../productsTienda";
 import ItemList from "../itemList/ItemList";
 import ItemCount from "../itemCount/ItemCount";
+import {useParams} from "react-router-dom"
 
 const itemListContainer = ( {} ) => {
 
+  const {categoryName} = useParams()
+  console.log (categoryName)
+
   const [ items, setItems] = useState([])
+  const [posts, setPosts] = useState([])
 
   const onAdd = ()=>{
     console.log("Bienvenidos")
@@ -21,7 +26,7 @@ const itemListContainer = ( {} ) => {
     })
     task
     .then((res)=> { 
-      setItems( res )
+      setItems(res)
     })
     .catch((err) => {
       console.log("no se puede")
@@ -29,6 +34,15 @@ const itemListContainer = ( {} ) => {
     
     console.log("realizado")
   },[])
+
+  useEffect( ()=>{
+    const getPost = fetch("https://jsonplaceholder.typicode.com/posts")
+    getPost
+    .then( (res)=> res.json() )
+    .then( (res)=> setPosts(res)) 
+  } ,[] )
+
+  console.log(posts)
 
   return (
     <div>
