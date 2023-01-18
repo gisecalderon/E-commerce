@@ -1,7 +1,7 @@
 
 import {useState} from "react"
 
-const Counter = ({stock, initial}) => {
+const ItemCount = ({stock, initial}) => {
     const [counter, setCounter] = useState( initial )
     
     const increment = () => {
@@ -29,4 +29,4 @@ const Counter = ({stock, initial}) => {
     )
 }
 
-export default Counter
+export default ItemCount

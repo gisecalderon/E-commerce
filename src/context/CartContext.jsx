@@ -8,7 +8,8 @@ const CartContextProvider = (children) => {
     
     const data = {
         cart,
-        setCart
+        setCart,
+        addToCart
     }
     
     return (
