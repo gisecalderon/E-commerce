@@ -7,8 +7,8 @@ const Form = () => {
         event.preventDefault()
         console.log(userData)
     }
-const handleKey = ()=>{
-    console.log(evento)
+const handleKey = (event)=>{
+    console.log(event)
 }
     return (
         <div>
@@ -17,8 +17,9 @@ const handleKey = ()=>{
                 type="text" 
                 placeholder='Nombre' 
                 name='name' 
-                value= (userData.name)
+                value={userData.name}
                 onChange={(event)=>setUserData({...userData, name: event.target.value})}
+                onKeyDown={handleKey}
                 />
                 <input 
                 type="text" 
