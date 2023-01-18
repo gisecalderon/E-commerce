@@ -1,8 +1,8 @@
-import "./cardWidget.css";
+import "./CardWidget.css";
 import {AiOutlineShoppingCart} from "react-icons/Ai"
 import{Link} from "react-router-dom"
 
-export const cardWidget = () => {
+export const CardWidget = () => {
     return (
         <Link to="/cart" >   
             <div className="container-carrito">

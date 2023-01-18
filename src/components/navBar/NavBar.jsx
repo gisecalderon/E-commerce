@@ -12,12 +12,12 @@ const NavBar = ()=>{
                 <img className="logo-navbar" src="" alt="Logo" />
             </div>
             <ul className="navbar">
-                <Link className="item-navbar" to="/">Todo</Link>
+                <Link className="item-navbar" to="/">Home</Link>
                 <Link className="item-navbar" to="/category/hoodies">Hoodies</Link>       
                 <Link className="item-navbar" to="/category/remeras">Remeras</Link>
                 <Link className="item-navbar" to="/category/jeans">Jeans</Link>
             </ul>  
-            <CardWidget />
+            <CardWidget/>
         </div>
     );
 };

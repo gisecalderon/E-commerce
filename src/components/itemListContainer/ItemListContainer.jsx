@@ -19,10 +19,12 @@ const itemListContainer = ( {} ) => {
 
   useEffect(()=>{
     
+    const productosfiltered = products.filter( productos => productos.category === categoryName)
+
     const task = new Promise ((resolve, reject) => {
       setTimeout(() => {
-        resolve(products)
-      },5000)
+        resolve(categoryName ? productosfiltered : products)
+      },500)
     })
     task
     .then((res)=> { 
@@ -33,7 +35,7 @@ const itemListContainer = ( {} ) => {
     })
     
     console.log("realizado")
-  },[])
+  },[categoryName])
 
   useEffect( ()=>{
     const getPost = fetch("https://jsonplaceholder.typicode.com/posts")
@@ -47,7 +49,7 @@ const itemListContainer = ( {} ) => {
   return (
     <div>
       <ItemCount initial={0} stock ={4}/>
-          <ItemList items={items} />
+      <ItemList items={items} />
     </div>
   )
 } 
