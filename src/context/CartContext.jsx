@@ -1,15 +1,41 @@
+import React from 'react'
 import {createContext, useState} from "react"
 export const CartContext = createContext()
 
-import React from 'react'
+
 
 const CartContextProvider = (children) => {
     const[cart, setCart]= useState([])
     
+    const addToCart = (element)=>{
+        if( isInCart(element)){
+            let newArray = cart.map (product => {
+                if (product.id === element.id){
+                    let newProduct ={
+                        ...product,
+                        quantity: product.quantity + element.quantity,
+                    }
+                    return newProduct 
+                } else{
+                    return product
+                }
+            })
+            setCart( newArray)
+        }else{
+            setCart([...cart , element] )}
+    }
+
+    const isInCart = (item)=> {
+        return cart.some (elemento => elemento.id === item.id)
+    }
+
+    const clearCart = ()=>{
+        setCart ([])
+    }
     const data = {
         cart,
-        setCart,
-        addToCart
+        addToCart,
+        clearCart
     }
     
     return (

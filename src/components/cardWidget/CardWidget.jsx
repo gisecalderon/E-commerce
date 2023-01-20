@@ -1,13 +1,21 @@
+import { useContext } from "react"
 import "./CardWidget.css";
 import {AiOutlineShoppingCart} from "react-icons/Ai"
 import{Link} from "react-router-dom"
+import { CartContext } from "../../context/CartContext";
+
 
 export const CardWidget = () => {
+    const {cart} = useContext(CartContext)
+
     return (
-        <Link to="/cart" >   
-            <div className="container-carrito">
+        <div className="container-carrito">
+            <Link to="/cart" >   
                 <AiOutlineShoppingCart color={"white"}/> 
-            </div> 
-        </Link>
+                <div>
+                    <span>{cart.length}</span>
+                </div>
+            </Link>
+        </div> 
 )
 }

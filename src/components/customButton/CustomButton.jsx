@@ -1,5 +1,5 @@
 import { useState } from "react"
-const CustomButtom = ( {texto, counter, serCounter})=>{
+const CustomButtom = ( {texto, counter, setCounter})=>{
     const sumar = ()=>{
         setCounter (counter +1)
     }
