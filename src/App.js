@@ -19,7 +19,6 @@ function App(){
                     <Route path="/" element={<ItemListContainer/>}/>
                     <Route path="/category/:categoryName" element={<ItemListContainer/>}/>
                     <Route path="/ItemDetail/:id" element={<ItemDetailContainer/>}/>
-
                     <Route path="/checkout" element={<Form/>}/>
                     <Route path="/cart" element={<Cart/>}/>
                     <Route path="*" element={<h3>Error de página, vuelva al inicio</h3>}/>

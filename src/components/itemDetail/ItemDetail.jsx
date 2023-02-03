@@ -4,11 +4,12 @@ import ItemCount from '../itemCount/ItemCount'
 
 const ItemDetail = ({product}) => {
 
-    const {addToCart} = useContext(CartContext)
+    const {addToCart, getQuantityById} = useContext(CartContext)
 
     const onAdd = (quantity) => {
         addToCart({...product, quantity:quantity})
     }
+    const quantity = getQuantityById (product.id)
     return (
         <div>
             <div>    
@@ -17,7 +18,7 @@ const ItemDetail = ({product}) => {
                 <h2>{product.precio}</h2>
                 <h2>{product.descripcion}</h2>
             </div>
-            <ItemCount onAdd={onAdd} stock={product.stock}/>
+            <ItemCount onAdd={onAdd} stock={product.stock} initial={quantity}/>
         </div>
     )
 }

@@ -1,8 +1,12 @@
+import { useEffect } from "react"
 import {useState} from "react"
 
-const ItemCount = ({stock=4, initial=1, onAdd}) => {
+const ItemCount = ({stock, initial=1, onAdd}) => {
     const [counter, setCounter] = useState( initial )
     
+    useEffect(()=>{
+        setCounter(initial)
+    }, [initial])
     const increment = () => {
         if (counter < stock) {
             setCounter( counter +1)
@@ -10,10 +14,11 @@ const ItemCount = ({stock=4, initial=1, onAdd}) => {
     }
 
     const decrement = () => {
-        if (counter > initial) {
+        if (counter > 1) {
             setCounter(counter - 1)
         }
     }
+
     return (
         <div>
             <h2>{counter}</h2>

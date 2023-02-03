@@ -9,11 +9,11 @@ const CartContextProvider = (children) => {
     
     const addToCart = (element)=>{
         if( isInCart(element)){
-            let newArray = cart.map (product => {
+            let newArray = cart.map((product) => {
                 if (product.id === element.id){
                     let newProduct ={
                         ...product,
-                        quantity: product.quantity + element.quantity,
+                        quantity:  element.quantity,
                     }
                     return newProduct 
                 } else{
@@ -21,7 +21,7 @@ const CartContextProvider = (children) => {
                 }
             })
             setCart( newArray)
-        }else{
+        } else{
             setCart([...cart , element] )}
     }
 
@@ -32,10 +32,23 @@ const CartContextProvider = (children) => {
     const clearCart = ()=>{
         setCart ([])
     }
+    const getQuantityById = (id)=>{
+        const product = cart.find(elemento => elemento.id === id)
+        return product?.quantity
+    }   
+    const getTotalPrecio = ()=>{
+        const total = cart.reduce((acc,element)=>{
+            return acc+ (element.precio*element.quantity)
+        },0)
+        return total
+    }
+ 
     const data = {
         cart,
         addToCart,
-        clearCart
+        clearCart,
+        getQuantityById, 
+        getTotalPrecio
     }
     
     return (
