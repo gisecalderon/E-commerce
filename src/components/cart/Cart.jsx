@@ -12,7 +12,7 @@ const Cart = () => {
         <div>{cart.map((item)=>(
             <div key ={item.id} item={item}>
                 <h2>Producto:{item.name}</h2>
-                <h2>Precio Total:{ getTotalPrecio() }</h2>
+                <h2>Precio Total: { getTotalPrecio()>0 ? getTotalPrecio() : "No hay items"}</h2>
                 <h2>Unidades:{item.quantity}</h2>
             </div>
         ))} 
