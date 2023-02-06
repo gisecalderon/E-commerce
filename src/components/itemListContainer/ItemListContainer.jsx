@@ -29,25 +29,6 @@ const itemListContainer = ( {} ) => {
 
   useEffect(()=>{
     setIsLoading(true)
-    
-    //const productosfiltered = products.filter( productos => productos.category === categoryName)
-
-    //const task = new Promise ((resolve, reject) => {
-  //    setTimeout(() => {
-  //      resolve(categoryName ? productosfiltered : products)
-  //    },500)
-  //  })
-   // task
-    //.then((res)=> { 
-     // setItems(res)
-//    })
-//    .catch((err) => {
-  //    console.log("no se puede")
-  //  })
-    
-   // console.log("realizado")
- // },[categoryName])
-
  // useEffect( ()=>{
  //   const getPost = fetch("https://jsonplaceholder.typicode.com/posts")
  //   getPost
@@ -59,29 +40,42 @@ const itemListContainer = ( {} ) => {
 
 const itemCollection = collection ( db, "products" )
 
-getDocs(itemCollection)
-.then( (res)=> console.log(res))
-.catch( (err)=> console.log(err))
+if (categoryName){
+  else{
 
+  }
+
+
+getDocs(itemCollection)
+.then( (res)=>{
+  const products = res.docs.map( product =>{
+    return{
+      ...product.data(),
+      id: product.id
+    }
+  })
+  setItems(products)
+} )
+
+.catch( (err)=> console.log(err))
+}
   setTimeout (()=>  {
     setIsLoading(false)
-  },4000)
-
-  }, [categoryName])
+  },1000)
+  }, [categoryName]);
 
   return (
     <div>
       {
         isLoading ? <ClipLoader
-        color={color} 
+        color={"grey"} 
         cssOverride={override}
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
       /> : <ItemList items={items} />
       }
-      <ItemCount initial={0} stock ={4}/>
-      <ItemList items={items} />
+
     </div>
   )
 } 

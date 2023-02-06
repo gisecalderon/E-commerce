@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import "./CardWidget.css";
-import {AiOutlineShoppingCart} from "react-icons/Ai"
+import {AiOutlineShoppingCart} from "react-icons/ai"
 import{Link} from "react-router-dom"
 import { CartContext } from "../../context/CartContext";
 
